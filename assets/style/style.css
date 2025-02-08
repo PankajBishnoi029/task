@@ -201,7 +201,7 @@ marquee {
 .vehicle-section {
   margin-bottom: 80px;
   padding: 40px;
-  background-color: #ffffff;
+  background-color: #add8e6;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   position: relative;
@@ -212,16 +212,6 @@ marquee {
   font-size: 2rem;
   font-weight: bold;
   color: #333;
-}
-
-.vehicle-section {
-  margin-bottom: 80px;
-  padding: 40px;
-  background-color: #add8e6; /* Light Blue Color */
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-  transition: transform 0.3s ease;
 }
 
 .vehicle-section p {
@@ -269,15 +259,40 @@ footer .social-icons img {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
-  .gap-50 {
-    gap: 20px;
+@media (max-width: 1140px) {
+  .container {
+    max-width: 1000px;
+  }
+  .header_div {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 980px) {
+  .header_div {
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
+    max-width: 900px;
   }
   .vehicle-section {
-    padding: 20px;
+    padding: 30px;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    max-width: 90%;
+  }
+  .header_div {
+    display: flex;
+    flex-direction: column;
   }
   .section-description {
-    max-width: 80%;
+    max-width: 100%;
   }
   .vehicle-section h2 {
     font-size: 1.5rem;
@@ -287,5 +302,6 @@ footer .social-icons img {
   }
   .btn-book-now {
     font-size: 1rem;
+    padding: 10px 20px;
   }
 }
