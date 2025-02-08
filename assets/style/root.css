@@ -1,0 +1,30 @@
+:root {
+  --white: #ffffff;
+  --blue: #41546b;
+  --orange: #ed8c0c;
+
+  --fs-sm: 25px;
+  --fs-md: 42px;
+
+  --lh-24: 24px;
+}
+
+.color-white {
+  color: var(--white);
+}
+.color-blue {
+  color: var(--blue);
+}
+.color-orange {
+  color: var(--orange);
+}
+
+.fs-sm {
+  font-size: var(--fs-sm);
+}
+.fs-md {
+  font-size: var(--fs-md);
+}
+.lh-24 {
+  line-height: var(--lh-24);
+}

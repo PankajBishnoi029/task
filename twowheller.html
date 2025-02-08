@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicle & Personal Details Form</title>
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <link rel="stylesheet" href="./assets/style/root.css" />
+    <link rel="stylesheet" href="./assets/style/two.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div
+        class="container d-flex justify-between pt-20 pb-20 item-center font-jost lh-24"
+      >
+        <img
+          class="img-fluid"
+          src="./assets/image/png/logo-parivahan-sewa-en.png"
+          alt=""
+        />
+        <div class="gap-50 d-flex text-color font-jost lh-100 fs-sm">
+          <a href="/index.html">Home</a>
+          <a href="">Track your order</a>
+          <a href="">Privacy Policy</a>
+          <a href="">Home installation</a>
+          <a href="">Contact us</a>
+        </div>
+        <div class="calling-div">
+          <a href="/index.html"><button class="calling-div">Home</button></a>
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="container mt-5">
+        <div class="card shadow p-4">
+          <h2 class="text-center">Vehicle & Personal Details</h2>
+          <form id="multiStepForm">
+            <!-- Step 1 -->
+            <div class="form-step active">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Registration No"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Owner Details"
+                />
+              </div>
+              <div class="form-group">
+                <select class="form-select">
+                  <option>Home</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="plateType" class="form-label"
+                  >Select Vehicle Type:</label
+                >
+                <select
+                  class="form-select"
+                  id="plateType"
+                  onchange="updatePrice()"
+                >
+                  <option value="400">Two wheeler Plate - ₹498</option>
+                  <option value="700">Three wheeler Plate - ₹698</option>
+                  <option value="1200">Four wheeler Plates - ₹898</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <p class="form-label">
+                  <strong>Price: </strong><span id="priceDisplay">₹400</span>
+                </p>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-center">
+                Submit
+              </button>
+              <button type="button" class="btn btn-next btn-primary btn-center">
+                Next
+              </button>
+            </div>
+
+            <!-- Step 2 -->
+            <!-- Step 2 -->
+            <div class="form-step">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Name"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="mobile"
+                  placeholder="Mobile"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Email"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="district"
+                  placeholder="District"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="house"
+                  placeholder="House"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="area"
+                  placeholder="Area"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="state"
+                  placeholder="State"
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="pincode"
+                  placeholder="Pincode"
+                />
+              </div>
+
+              <button
+                type="button"
+                class="btn btn-prev btn-secondary btn-center mb-2"
+              >
+                Previous
+              </button>
+
+              <button
+                type="button"
+                class="btn btn-primary btn-center"
+                id="submitStep2"
+              >
+                Submit
+              </button>
+
+              <button
+                type="button"
+                class="btn btn-next btn-primary btn-center"
+                id="nextStep3"
+                disabled
+              >
+                Next
+              </button>
+            </div>
+
+            <!-- Step 3: Payment -->
+
+            <div class="form-step">
+              <marquee
+                class="text-danger fw-bold fs-5 mt-2 w-100"
+                direction="left"
+                scrollamount="8"
+              >
+                🚚 Order should be delivered within seven to eight working days!
+                🚚
+              </marquee>
+
+              <h3 class="text-center">Payment Details</h3>
+
+              <div class="d-flex justify-content-between">
+                <div>
+                  <img
+                    src="./assets/image/png/6b8a701a-5ea1-4677-a4bc-3f161afe4184.jpeg"
+                    alt="UPI QR"
+                    width="450"
+                  />
+                  <p class="mt-2">
+                    <strong>UPI ID:</strong> <span id="upiID"></span>
+                  </p>
+                  <button
+                    type="button"
+                    class="btn btn-sm btn-outline-primary"
+                    onclick="copyUPI()"
+                  >
+                    Copy
+                  </button>
+                </div>
+                <div>
+                  <label class="form-label">Upload Payment Screenshot:</label>
+                  <input type="file" class="form-control" accept="image/*" />
+                </div>
+              </div>
+
+              <div class="form-group mt-3">
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Enter Email for Confirmation"
+                />
+              </div>
+
+              <div class="form-group">
+                <p class="form-label">
+                  <strong>Total Price:</strong>
+                  <span id="finalPrice">₹400</span>
+                </p>
+              </div>
+
+              <button
+                type="button"
+                class="btn btn-prev btn-secondary btn-center mb-2"
+              >
+                Previous
+              </button>
+              <button
+                type="button"
+                class="btn btn-success btn-center"
+                onclick="showPopup()"
+              >
+                Confirm
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Confirmation Popup -->
+    <div id="popup" class="popup-overlay" style="display: none">
+      <div class="popup-content">
+        <h3>🎉 Congratulations! 🎉</h3>
+        <p>Your order has been placed successfully.</p>
+        <button class="btn btn-primary" onclick="closePopup()">OK</button>
+      </div>
+    </div>
+
+    <script src="./assets/script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </body>
+</html>

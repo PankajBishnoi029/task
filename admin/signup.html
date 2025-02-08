@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <h3 class="text-center">Login</h3>
+              <div id="response" class="alert d-none"></div>
+              <form id="loginForm">
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Password</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="password"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary w-100">
+                  Login
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", async function (event) {
+          event.preventDefault();
+          const email = document.getElementById("email").value;
+          const password = document.getElementById("password").value;
+          const responseDiv = document.getElementById("response");
+
+          try {
+            const response = await fetch(
+              "http://localhost:4000/api/v1/adminRoutes/loginup",
+              {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email, password }),
+              }
+            );
+            const data = await response.json();
+            if (response.ok) {
+              responseDiv.className = "alert alert-success";
+              responseDiv.textContent = "Login successful! Redirecting...";
+              responseDiv.classList.remove("d-none");
+              setTimeout(() => {
+                window.location.href = "admin.html"; // Change to your next page
+              }, 2000);
+            } else {
+              responseDiv.className = "alert alert-danger";
+              responseDiv.textContent = data.message || "Login failed!";
+              responseDiv.classList.remove("d-none");
+            }
+          } catch (error) {
+            responseDiv.className = "alert alert-danger";
+            responseDiv.textContent = "Error connecting to server";
+            responseDiv.classList.remove("d-none");
+          }
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+@import url(./root.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none !important;
+}
+
+.font-jost {
+  font-family: "Jost", serif;
+}
+
+/* -------------------------------width------------- */
+.max-w-1760 {
+  max-width: 1760px;
+}
+.max-w-273 {
+  max-width: 273.42px;
+}
+.max-w-547 {
+  max-width: 547px;
+}
+
+/* -------------------------------height------------- */
+.h-80 {
+  height: 80px;
+}
+
+/* -------------------------------gap------------- */
+.gap-50 {
+  gap: 50px;
+}
+
+/* -------------------------------margin------------- */
+.mt-20 {
+  margin-top: 20px;
+}
+.pt-20 {
+  padding-top: 20px;
+}
+.pb-20 {
+  padding-bottom: 20px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.item-center {
+  align-items: center;
+}
+
+.text-color > a {
+  color: #41546b;
+}
+
+.calling-div {
+  background-color: #41546b;
+  height: 55px;
+  width: 233px;
+  display: flex;
+  align-items: center;
+  color: white;
+  gap: 10px;
+  justify-content: center;
+}
+
+.lh-100 {
+  line-height: 100%;
+}
+
+.bg-img {
+  background-image: url("../img/png/pexels-pixabay-260922\ 1.png");
+  height: 100vh;
+}
+
+.book-section {
+  max-width: 950px;
+}
+
+header {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* main section */
+.justify-around {
+  justify-content: space-around;
+}
+
+.bg-wheat {
+  background-color: #f5f5dc;
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+button {
+  transition: ease 0.3s;
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  background-color: #51546c;
+  scale: 1.05;
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1760px !important;
+  }
+}
+
+.section-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .section-header {
+    text-align: center;
+  }
+}
+
+.ml {
+  display: flex;
+  width: 80%;
+  justify-content: space-around;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  background-color: #f4f4f4;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 30px;
+}
+
+header {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.gap-50 {
+  gap: 50px;
+}
+
+.calling-div {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+
+.calling-div img {
+  margin-right: 10px;
+}
+
+marquee {
+  font-size: 1.25rem;
+  padding: 15px;
+  background-color: #f8f9fa;
+  margin-bottom: 20px;
+}
+
+.section-header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.section-description {
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  color: #666;
+}
+
+.btn-book-now {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  float: right;
+}
+
+.vehicle-section {
+  margin-bottom: 80px;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.vehicle-section h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.vehicle-section {
+  margin-bottom: 80px;
+  padding: 40px;
+  background-color: #add8e6; /* Light Blue Color */
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.vehicle-section p {
+  font-size: 1.125rem;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.vehicle-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 40px 0;
+  margin-top: 80px;
+  text-align: center;
+}
+
+footer .text-decoration-none {
+  text-decoration: none;
+  color: white;
+}
+
+footer .text-decoration-none:hover {
+  text-decoration: underline;
+}
+
+footer p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+footer .social-icons {
+  margin-top: 20px;
+}
+
+footer .social-icons img {
+  width: 35px;
+  margin: 0 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .gap-50 {
+    gap: 20px;
+  }
+  .vehicle-section {
+    padding: 20px;
+  }
+  .section-description {
+    max-width: 80%;
+  }
+  .vehicle-section h2 {
+    font-size: 1.5rem;
+  }
+  .vehicle-section p {
+    font-size: 1rem;
+  }
+  .btn-book-now {
+    font-size: 1rem;
+  }
+}
