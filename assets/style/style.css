@@ -263,6 +263,11 @@ footer .social-icons img {
   .container {
     max-width: 1000px;
   }
+  .responsive {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   .header_div {
     display: flex;
     flex-direction: column;
@@ -271,6 +276,12 @@ footer .social-icons img {
 }
 
 @media (max-width: 980px) {
+  .responsive {
+    justify-content: center;
+
+    display: flex;
+    flex-direction: column;
+  }
   .header_div {
     display: flex;
     flex-direction: column;
@@ -284,6 +295,11 @@ footer .social-icons img {
 }
 
 @media (max-width: 720px) {
+  .responsive {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
   .container {
     max-width: 90%;
   }
