@@ -259,7 +259,7 @@ footer .social-icons img {
 }
 
 /* Responsive Adjustments */
-@media (max-width: 1140px) {
+@media (max-width: 1260px) {
   .container {
     max-width: 1000px;
   }
