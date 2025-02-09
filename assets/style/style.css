@@ -303,7 +303,12 @@ footer .social-icons img {
   .editor > img {
     width: 100%;
   }
-
+  .responsive {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .img-pricahan {
     width: 20%;
   }

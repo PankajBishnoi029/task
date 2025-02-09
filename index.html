@@ -170,21 +170,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuBtn = document.getElementById("menu-toggle");
-        const mobileMenu = document.getElementById("mobile-menu");
-        const marquee = document.getElementById("marquee");
-
-        menuBtn.addEventListener("click", function () {
-          mobileMenu.classList.toggle("show");
-          if (mobileMenu.classList.contains("show")) {
-            marquee.style.display = "none";
-          } else {
-            marquee.style.display = "block";
-          }
-        });
-      });
-    </script>
+    <script src="./assets/script/headrescript.js"></script>
   </body>
 </html>
