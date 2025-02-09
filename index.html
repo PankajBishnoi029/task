@@ -4,14 +4,14 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>VIP Number Plates</title>
-    <link rel="stylesheet" href="./assets/style/style.css" />
-    <link rel="stylesheet" href="./assets/style/root.css" />
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <link rel="stylesheet" href="./assets/style/root.css" />
   </head>
   <body>
     <!-- Header -->
@@ -24,7 +24,11 @@
           src="./assets/image/png/viponeplate.png"
           alt="Parivahan Logo"
         />
-        <div class="gap-50 d-flex text-color font-jost lh-100 fs-sm">
+        <button id="menu-toggle" class="menu-btn">☰ Menu</button>
+        <div
+          id="mobile-menu"
+          class="mobile-menu text-color font-jost lh-100 fs-sm anchor"
+        >
           <a href="/index.html">Home</a>
           <a href="">Track your order</a>
           <a href="">Privacy Policy</a>
@@ -36,6 +40,7 @@
 
     <!-- Marquee Announcement -->
     <marquee
+      id="marquee"
       class="text-danger fw-bold fs-4 mt-3 py-2 bg-light w-100"
       direction="left"
       scrollamount="10"
@@ -51,57 +56,50 @@
       <img
         src="./assets/image/png/vip1.png"
         width="45%"
-        height="400px"
+        height="auto"
         alt="VIP Plate Image 1"
       />
       <img
         src="./assets/image/png/vip2.png"
         width="45%"
-        height="400px"
+        height="auto"
         alt="VIP Plate Image 2"
       />
     </div>
     <br />
-    <br />
-    <br />
+
     <!-- Main Section -->
     <section class="container text-center my-5">
       <h1 class="section-header">Get Your Exclusive VIP Number Plate Today!</h1>
-      <p class="section-description">
+      <p>
         Stand out from the crowd with a unique and personalized number plate for
         your vehicle. Our premium plates enhance your vehicle’s identity, making
         it stylish and exclusive. Order today and enjoy a hassle-free
         registration process!
       </p>
     </section>
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
+
+    <!-- About Section -->
     <div class="container my-5">
       <div class="row align-items-center">
-        <!-- Image Section -->
-        <div class="ml">
+        <div class="col-md-6 align-items-center img-cr">
           <img
             class="img-fluid rounded-3"
             src="./assets/image/png/bg.png"
             alt="VIP Plates Image"
-            height="400px"
+            height="auto"
           />
-
-          <!-- Text Section -->
-          <div class="col-md-6">
-            <h2 class="section-header">About VIP Number Plates</h2>
-            <p>
-              Elevate your vehicle’s identity with our exclusive VIP number
-              plates. Designed to make your vehicle stand out, these plates
-              offer a touch of elegance and personalization. Whether you're
-              looking to enhance your car, bike, or any other vehicle, our
-              plates reflect your unique personality and style. Enjoy premium
-              quality, legal compliance, and easy registration processes.
-            </p>
-          </div>
+        </div>
+        <div class="col-md-6">
+          <h2 class="section-header">About VIP Number Plates</h2>
+          <p>
+            Elevate your vehicle’s identity with our exclusive VIP number
+            plates. Designed to make your vehicle stand out, these plates offer
+            a touch of elegance and personalization. Whether you're looking to
+            enhance your car, bike, or any other vehicle, our plates reflect
+            your unique personality and style. Enjoy premium quality, legal
+            compliance, and easy registration processes.
+          </p>
         </div>
       </div>
     </div>
@@ -118,9 +116,9 @@
               plate that suits your personality. Order now and ride with pride!
             </p>
           </div>
-          <a href="/twowheller.html">
-            <button class="btn-book-now">Book Now</button>
-          </a>
+          <a href="/twowheller.html"
+            ><button class="btn-book-now">Book Now</button></a
+          >
         </div>
       </div>
 
@@ -135,9 +133,9 @@
               look.
             </p>
           </div>
-          <a href="/twowheller.html">
-            <button class="btn-book-now">Book Now</button>
-          </a>
+          <a href="/twowheller.html"
+            ><button class="btn-book-now">Book Now</button></a
+          >
         </div>
       </div>
 
@@ -152,9 +150,9 @@
               standards.
             </p>
           </div>
-          <a href="/twowheller.html">
-            <button class="btn-book-now">Book Now</button>
-          </a>
+          <a href="/twowheller.html"
+            ><button class="btn-book-now">Book Now</button></a
+          >
         </div>
       </div>
     </section>
@@ -172,5 +170,21 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuBtn = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const marquee = document.getElementById("marquee");
+
+        menuBtn.addEventListener("click", function () {
+          mobileMenu.classList.toggle("show");
+          if (mobileMenu.classList.contains("show")) {
+            marquee.style.display = "none";
+          } else {
+            marquee.style.display = "block";
+          }
+        });
+      });
+    </script>
   </body>
 </html>
