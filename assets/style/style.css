@@ -144,6 +144,9 @@ button:hover {
   width: 80%;
   justify-content: space-around;
 }
+.menu-btn {
+  display: none;
+}
 
 body {
   font-family: "Jost", sans-serif;
@@ -326,6 +329,9 @@ footer .social-icons img {
 @media (max-width: 720px) {
   .header_div {
     justify-content: space-between;
+  }
+  .menu-btn {
+    display: block;
   }
   .img-cr {
     display: flex;
